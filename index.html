@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Organizer - Hardianti Rahma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="web-label">
+                <span class="logo-icon">EO</span>
+                <div class="brand-text">
+                    <h1>Mandiri Planner</h1>
+                    <small>Professional Event Organizer</small>
+                </div>
+            </div>
+            <div class="user-profile">
+                <div class="avatar">HR</div>
+                <div class="profile-text">
+                    <strong>Hardianti Rahma</strong>
+                    <p>Sistem Informasi UMSU</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <div class="about-card">
+                <h3>Tentang Web</h3>
+                <p>Web ini adalah sistem manajemen pendaftaran peserta acara. Memungkinkan admin untuk mendata peserta, memilih jenis layanan, dan memantau daftar hadir secara dinamis.</p>
+            </div>
+        </section>
+
+        <section class="admin-panel">
+            <div class="form-card">
+                <h3>Form Pendaftaran Peserta</h3>
+                <form id="registrationForm">
+                    <input type="text" id="namaPeserta" placeholder="Nama Lengkap Peserta" required>
+                    <input type="email" id="emailPeserta" placeholder="Email (Validasi @)" required>
+                    <input type="number" id="usiaPeserta" placeholder="Usia Peserta (Angka Positif)" required>
+                    
+                    <select id="jenisLayanan">
+                        <option value="Wedding">Wedding Organizer</option>
+                        <option value="Seminar">Seminar Internasional</option>
+                        <option value="Workshop">Workshop Teknologi</option>
+                        <option value="Konser">Konser Musik</option>
+                    </select>
+
+                    <div class="radio-box">
+                        <label><input type="radio" name="status" value="Reguler" checked> Reguler</label>
+                        <label><input type="radio" name="status" value="VIP"> VIP</label>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Daftarkan Peserta</button>
+                    <div id="errorMsg" class="error-text"></div>
+                </form>
+            </div>
+        </section>
+
+        <section class="display-panel">
+            <div class="display-header">
+                <h3>Layanan & Peserta Terdaftar</h3>
+                <input type="text" id="searchBar" placeholder="Cari nama peserta...">
+            </div>
+            <div class="grid-container" id="cardContainer">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>UTS Pemrograman Web &copy; 2026 - Hardianti Rahma</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
